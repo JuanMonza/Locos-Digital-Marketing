@@ -1,0 +1,344 @@
+/* Estilos Generales */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Video de fondo en toda la página */
+.background-video {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-video video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Encabezado */
+.header {
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    color: #f0ea50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #ff0000;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: url('/proyecto/simio/image/Marketing-2.png') no-repeat center/cover;
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.btn-hero {
+    background-color: #ff1212;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-hero:hover {
+    background-color: #e4c84b; 
+}
+
+.nosotros h2{
+    text-align: center;
+}
+
+.nosotros p {
+    text-align: center;
+}
+
+/* Sección Nuestro Equipo */
+.equipo {
+    text-align: center; 
+}
+
+.equipo-grid {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+
+.miembro {
+    margin: 40px; 
+}
+
+.miembro img {
+    border-radius: 50%; 
+    width: 150px; 
+    height: 150px; 
+}
+
+/* Proyectos */
+.proyectos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.proyectos h2{
+    text-align: center;
+}
+
+.proyecto {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.proyecto img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.proyecto .imagen-hover {
+    opacity: 0;
+}
+
+.proyecto:hover .imagen-hover {
+    opacity: 1;
+}
+
+.proyecto:hover .imagen-principal {
+    opacity: 0;
+}
+
+/* Título del proyecto */
+.proyecto-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(239, 239, 239, 0.178);
+    z-index: 1;
+}
+
+/* Estilos del contacto */
+.contactanos-central {
+    text-align: center;
+}
+
+.contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.contacto-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacto-form {
+    flex: 1;
+    margin: 20px; 
+    padding: 60px; 
+    max-width: 400px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px;
+    text-align: center;
+    align-items: center; 
+}
+
+.contacto-form input, .contacto-form textarea {
+    width: 100%; 
+    margin-bottom: 15px;
+    padding: 0px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: 16px;
+}
+
+.contacto-form button {
+    background-color: #f5e85b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; 
+}
+
+.contacto-info {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.informacion-contacto, .redes-sociales {
+    flex: 1;
+    text-align: center;
+}
+
+.informacion-contacto {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin: 0 10px;
+}
+
+.informacion-contacto {
+    text-align: left;
+    flex: 1;
+}
+
+.informacion-contacto p {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Diseño login Admin */
+.admin-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px;
+}
+
+.admin-login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: 16px;
+}
+
+.admin-login button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff3838;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Diseño Tareas */
+.tarea-form, .tareas-list {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.tarea-form input, .tarea-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: 16px;
+}
+
+.tarea-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f5e85b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tarea-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: #7e7e7e22;
+}

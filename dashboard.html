@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - LOCOS DIGITAL MARKETING</title>
+    <link rel="stylesheet" href="/proyecto/simio/marketing.css">
+</head>
+<body>
+    <!-- Video de fondo en toda la página -->
+    <div class="background-video">
+        <video autoplay muted loop>
+            <source src="/proyecto/simio/video/Abstract_black_liquid_wave_background__Luxurious_design_of_elegant_curves_black_material__Animation_4K_2.mp4" type="video/mp4">
+            Tu navegador no soporta el formato de video.
+        </video>
+    </div>
+
+    <header class="header">
+        <div class="logo">
+            <img src="/proyecto/simio/image/Logo Digital de Locos _edited.png" alt="LOGO LOCOS DIGITAL MARKETING">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#tareas">Proyectos</a></li>
+                <li><a href="/logout">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contactos">
+        <h2>Contactos Registrados</h2>
+        <div class="contactos-list">
+            {% for contacto in contactos %}
+                <div class="contacto-item">
+                    <p><strong>Nombre:</strong> {{ contacto.nombre }}</p>
+                    <p><strong>Correo:</strong> {{ contacto.correo }}</p>
+                    <p><strong>Mensaje:</strong> {{ contacto.mensaje }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="tareas" class="tareas">
+        <h2>Trabajos Pendientes</h2>
+        <form action="/tareas" method="post" class="tarea-form">
+            <input type="text" name="titulo" placeholder="Título de la tarea" required>
+            <textarea name="descripcion" placeholder="Descripción" required></textarea>
+            <input type="datetime-local" name="fecha_inicio" required>
+            <input type="datetime-local" name="fecha_entrega" required>
+            <input type="number" name="porcentaje_completado" placeholder="Porcentaje completado" required>
+            <input type="datetime-local" name="recordatorio" required>
+            <button type="submit" class="btn-hero">Agregar Tarea</button>
+        </form>
+
+        <div class="tareas-list">
+            {% for tarea in tareas %}
+                <div class="tarea-item">
+                    <p><strong>Título:</strong> {{ tarea.titulo }}</p>
+                    <p><strong>Descripción:</strong> {{ tarea.descripcion }}</p>
+                    <p><strong>Fecha de Inicio:</strong> {{ tarea.fecha_inicio }}</p>
+                    <p><strong>Fecha de Entrega:</strong> {{ tarea.fecha_entrega }}</p>
+                    <p><strong>Porcentaje Completado:</strong> {{ tarea.porcentaje_completado }}%</p>
+                    <p><strong>Recordatorio:</strong> {{ tarea.recordatorio }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 LOCOS DIGITAL MARKETING | Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
